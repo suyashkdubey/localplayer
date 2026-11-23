@@ -27,7 +27,7 @@ def file_logger(verbose: bool = False) -> RotatingFileHandler:
     return file_logger
 
 def setup_logger(console_logger_verbose: bool = False, file_logger_verbose: bool = False) -> logging.Logger:
-    logger = logging.getLogger(__name__)
+    logger = logging.getLogger("localplayer")
     logger.setLevel(logging.DEBUG)
 
     if logger.handlers:

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "localplayer"
+version = "0.1.0"
+description = "A local media library and player"
+requires-python = ">=3.10"
+
+[project.scripts]
+localplayer = "localplayer.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+localplayer = ["default_settings.toml"]
